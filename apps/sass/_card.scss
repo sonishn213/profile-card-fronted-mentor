@@ -1,0 +1,102 @@
+.card {
+  width: 100%;
+  height: 23.4375rem;
+  background-color: white;
+  border-radius: 16px;
+  margin: auto 554px;
+  position: relative;
+  box-shadow: 6px 11px 37px -14px rgba(0, 0, 0, 0.4);
+  &__background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    & .cover-img {
+      border-top-right-radius: 16px;
+      border-top-left-radius: 16px;
+      width: 100%;
+      height: (140px/375px) * 100%;
+      background-image: url(../../images/bg-pattern-card.svg);
+      background-size: cover;
+      z-index: -1;
+    }
+  }
+  &__content {
+    position: absolute;
+    margin-top: 87px;
+
+    z-index: 4;
+    width: 100%;
+    .pic-container {
+      margin: 0 auto;
+      width: 98px;
+      min-height: 98px;
+      max-height: 98px;
+      background-color: rgb(255, 255, 255);
+      border: 5px solid white;
+      border-radius: 50%;
+      overflow: hidden;
+
+      &__pro-pic {
+        width: 100%;
+        height: auto;
+      }
+    }
+    & > div:nth-child(2) {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      margin-top: 24px;
+      & .pro-name {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: $very-dark-desaturated-blue;
+        margin-right: 5px;
+      }
+      & .pro-age {
+        color: $dark-grayish-blue;
+      }
+      & .place {
+        color: $dark-grayish-blue;
+        font-size: 0.9375rem;
+        margin-top: 12px;
+      }
+      & .separator {
+        border-top: 0.2px solid $dark-gray;
+        height: 0;
+        width: 100%;
+        margin: 26px 0;
+      }
+    }
+    & .stats-container {
+      justify-content: space-evenly;
+      width: 100%;
+      & .box {
+        display: inline-block;
+        text-align: center;
+        > span {
+          display: block;
+        }
+        &__nums {
+          font-size: 1.125rem;
+          font-weight: 700;
+          color: $very-dark-desaturated-blue;
+        }
+        &__texts {
+          margin-top: 10px;
+          font-size: 0.75rem;
+          color: $dark-gray;
+          letter-spacing: 1.2px;
+        }
+      }
+    }
+  }
+}
+@media screen and(max-width:1000px) {
+  body {
+    background-size: 110vw, 110vw, contain;
+    background-position: top -55vw left -55vw, bottom -55vw right -55vw, center;
+  }
+  .card {
+    margin: auto 24px !important;
+  }
+}
